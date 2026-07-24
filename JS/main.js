@@ -32,7 +32,7 @@ let IndiceActual = 0;
 
 botonSiguiente.addEventListener('click',() => {
 
-    fotos[IndiceActual].classList.remove('activo');
+    fotos[IndiceActual].classList.remove('active');
 
     IndiceActual = IndiceActual + 1;
 
@@ -40,7 +40,7 @@ botonSiguiente.addEventListener('click',() => {
         IndiceActual = 0;
     }
 
-    fotos[IndiceActual].classList.add('activo');
+    fotos[IndiceActual].classList.add('active');
 
 });
 
@@ -48,7 +48,7 @@ const botonAnterior= document.getElementById('btn-Anterior');
 
 botonAnterior.addEventListener('click', () => {
     
-    fotos[IndiceActual].classList.remove('activo');
+    fotos[IndiceActual].classList.remove('active');
 
     IndiceActual = IndiceActual - 1;
 
@@ -56,5 +56,5 @@ botonAnterior.addEventListener('click', () => {
         IndiceActual = fotos.length - 1;
     }
 
-    fotos[IndiceActual].classList.add('activo');
+    fotos[IndiceActual].classList.add('active');
 })
