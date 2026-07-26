@@ -160,6 +160,8 @@ a:hover{
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .tarjeta::before{
@@ -172,6 +174,12 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.45);
 }
 
+
+.tarjeta:hover::before{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
 .tarjeta span{
     position: relative;
     z-index: 2;
@@ -181,6 +189,11 @@ a:hover{
     padding: 20px;
     text-align: center;
     width: 100%;
+}
+
+.tarjeta:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 
