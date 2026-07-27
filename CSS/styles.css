@@ -73,15 +73,49 @@ a:hover{
     display:none;
 }
 
-@media (max-width:768px){
+@media (max-width: 768px){
+    header{
+        flex-wrap: wrap;
+    }
+
     #menu-btn{
-        display:block
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+        order: 1;
     }
+
+    .logo-box{
+        order: 2;
+    }
+
     nav{
-        display:none;
+        display: none;
+        width: 100%;
+        order: 3;
     }
+
     nav.show{
-        display:block;
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li{
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a{
+        display: block;
+        padding: 15px 0;
     }
 }
 
@@ -232,4 +266,17 @@ a:hover{
 
 #carrusel img.active{
     opacity: 1;
+}
+
+
+@media (max-width: 1024px){
+    .grid-productos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    .grid-productos{
+        grid-template-columns: 1fr;
+    }
 }
